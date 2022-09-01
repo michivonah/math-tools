@@ -85,6 +85,13 @@ body{
     background: var(--theme2);
    }
 
+   /* Tools */
+   #toolContainer{
+      width: 60%; /* Temporary */
+      height: auto;
+      margin: 0 0 0 40%; /* Temporary */
+   }
+
    .tool{
       display: none;
    }
