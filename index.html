@@ -44,7 +44,10 @@
         </div>
       </div>
       <div id="toolList">
-        <input type="radio" id="tool001" class="toolCategoryInput" name="toolCategory" onchange="changeTool();" checked>
+        <input type="radio" id="welcome" class="toolCategoryInput" name="toolCategory" onchange="changeTool();" checked>
+        <label for="welcome" class="toolCategoryLabel"><i class="ai-victory-hand"></i> Willkommen</label>
+
+        <input type="radio" id="tool001" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
         <label for="tool001" class="toolCategoryLabel"><i class="ai-calculator"></i> Zahlensysteme</label>
 
         <input type="radio" id="tool002" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
@@ -60,20 +63,30 @@
 
     <div id="content">
         <div>
-            <h1>Math Tools</h1>
         </div>
 
         <div id="toolContainer">
+          <div id="willkommen" class="tool" data-toolid="welcome">
+            <h2>Hallo! <i class="ai-victory-hand"></i></h2>
+            <p>Herzlich Willkommen auf math-tools.app. Das wird eine Sammlung von diversen Mathematik Tools. Es soll dazu dienen dir den Alltag zu erleichtern.</p>
+            <p>Wenn dir ein Tool fehlt, dann melde dich gerne bei mir. Mail: <a href="mailto:info@michivonah.ch" class="link">info@michivonah.ch</a></p>
+            <p>Wenn du mehr &uuml;ber mich erfahren willst, besuche meine Website auf <a href="https://michivonah.ch" class="link">michivonah.ch</a>.</p>
+          </div>
+
           <div id="zahlensysteme" class="tool" data-toolid="tool001">
-            <h1>Zahlensysteme</h1>
+            <h2>Zahlensysteme</h2>
           </div>
 
           <div id="flaechen" class="tool" data-toolid="tool002">
-            <h1>Fl&auml;chen</h1>
+            <h2>Fl&auml;chen</h2>
           </div>
 
           <div id="volumen" class="tool" data-toolid="tool003">
-            <h1>Volumen</h1>
+            <h2>Volumen</h2>
+          </div>
+
+          <div id="volumen" class="tool" data-toolid="tool003">
+            <h2>Phytagoras</h2>
           </div>
         </div>
     </div>
