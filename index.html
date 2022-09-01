@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <title>Math Tools</title>
+  <meta name="mobile-web-app-title" content="Math Tools">
+  <meta name="apple-mobile-web-app-title" content="Math Tools">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="assets/images/logo.png">
+  <link rel="canonical" href="https://ava.von-ah.me">
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="description" content="Math Tools">
+  <meta name="author" content="Michi von Ah">
+  <meta name="keywords" content="Math Tools">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="expires" content="43200">
+
+  <meta name="theme-color" content="#e67e22">
+  <meta name="mobile-web-app-status-bar-style" content="#e67e22">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#e67e22">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="inner-width">
+          <div></div>
+        </div>
+    </nav>
+
+    <div id="content">
+        <div>
+            <h1>Math Tools</h1>
+        </div>
+    </div>
+
+
+    <div id="scroll-top" onclick="scrollToTop();">
+      <i class="ai-chevron-up"></i>
+    </div>
+
+
+
+      <script>
+      // Loading
+      window.addEventListener('load', () => {
+        if(window.matchMedia('(prefers-color-scheme: dark)').matches || localStorage.getItem('darkmode') == "true"){
+            document.body.style.setProperty('--background', '#181818');
+            document.body.style.setProperty('--color', '#fff');
+            console.log('Darkmode activated.');
+        	}
+          AOS.init({disable: true});
+      });
+
+      window.addEventListener('scroll', function(e) {
+        var scrollTop = document.getElementById('scroll-top');
+        if(this.scrollY > 20){
+          scrollTop.style.right = "0";
+        }
+        else{
+          scrollTop.style.right = "-55px";
+        }
+      });
+
+      function scrollToTop(){
+        window.scroll(0, 0);
+      }
+
+      function toggleSection(sectionName, type){
+        var section = document.getElementById(sectionName);
+        if(section.style.display == "block" || section.style.display == "flex"){
+          section.style.display = "none";
+        }
+        else{
+          section.style.display = type;
+        }
+      }
+
+
+      function toggleClass(className){
+        var elements = document.getElementsByClassName(className);
+        for(var i = 0; i < elements.length; i++){
+          if(elements[i].style.display == "block"){
+            elements[i].style.display = "none";
+          }
+          else{
+            elements[i].style.display = "block";
+          }
+        }
+      }
+      </script>
+</body>
+</html>
+

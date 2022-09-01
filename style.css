@@ -1,0 +1,128 @@
+html{scroll-behavior: smooth;}
+
+body{
+   margin: 0;
+   padding: 0;
+   color: var(--color);
+   background: var(--background);
+   text-align: left;
+   font-family: "open sans", sans-serif;
+   scroll-behavior: smooth;
+   --theme1: #3498db;
+   --theme2: #2980b9;
+   --background: #eaf2f8;
+   --color: #1d1d1d;
+   --white: #eaf2f8;
+   --black: #1d1d1d;
+   --borderRadius: 8px;
+   --font: 'open sans', sans-serif;
+   --transition: 200ms ease all;
+   }
+
+   #content{
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+      overflow-x: hidden;
+   }
+ 
+   .inner-width{
+      width: 100%;
+      max-width: clamp(1100px, 90%, 1250px);
+      margin: auto;
+   }
+
+   /* Scroll to the top button*/
+   #scroll-top{
+      width: 40px;
+      height: 40px;
+      background: var(--theme1);
+      border-radius: 12px;
+      margin: 15px;
+      bottom: 0;
+      right: -55px;
+      position: fixed;
+      display: flex; /* FLEX */
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      font-size: 28px;
+      color: var(--white);
+      transition: .2s linear;
+   }
+
+   #scroll-top i{
+      margin: 0;
+      transition: .1s linear;
+      stroke-width: 3px;
+   }
+
+   #scroll-top i:hover{
+      margin: -5px 0 0 0;
+   }
+
+   /* General */
+   .link{
+      position: relative;
+   }
+
+   .link::after{
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--white);
+      transition: all 250ms;
+      transform: scaleX(0);
+   }
+
+   .link:hover::after{
+      transform: scaleX(0.65);
+   }
+
+   a{
+      color: inherit;
+      text-decoration: none;
+      outline: none;
+   }
+
+   a:hover{
+      color: inherit;
+   }
+
+   i{
+      text-decoration: none !important;
+      outline: none;
+      font-style: normal;
+   }
+
+   i:hover{
+      text-decoration: none !important;
+      outline: none;
+      font-style: normal;
+   }
+
+   var{
+      font-style: normal;
+      outline: none;
+   }
+
+   input, textarea, button{
+      outline: none;
+      caret-color: var(--theme1);
+   }
+
+   input::placeholder, textarea::placeholder{
+      color: inherit;
+      caret-color: var(--theme1);
+   }
+
+   /* Smartphone */
+   @media screen and (max-width:640px){
+   }
+
+   /* Selection */
+  ::selection {background: var(--theme1); color: #ffffff; border-radius: 12px;}
+  ::-moz-selection {background: var(--theme1); color: #ffffff; border-radius: 12px;}
