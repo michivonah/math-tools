@@ -55,20 +55,28 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-content: center;
+    align-content: stretch;
     align-items: stretch;
     background: var(--theme1);
     color: var(--white);
    }
 
-   #toolList a{
+   #toolList input[type=radio]{
+      display: none;
+   }
+
+   #toolList label{
     padding: 10px 5px;
     transition: var(--transition);
     border-radius: 4px;
    }
 
-   #toolList a:hover{
+   #toolList label:hover, .toolCategoryInput:checked + .toolCategoryLabel{
     background: var(--theme2);
+   }
+
+   .tool{
+      display: none;
    }
 
    /* Scroll to the top button*/

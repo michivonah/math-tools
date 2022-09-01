@@ -37,23 +37,44 @@
 <body>
 
     <nav id="navbar">
-        <div class="inner-width">
-          <div>
-            <img src="">
-            <p>math-tools.app</p>
-          </div>
-          <div id="toolList">
-            <a><i class="ai-calculator"></i> Zahlensysteme</a>
-            <a><i class="ai-box"></i> Fl&auml;chen</a>
-            <a><i class="ai-home"></i> Volumen</a>
-            <a><i class="ai-box"></i> Phytagoras</a>
-          </div>
+      <div class="inner-width">
+        <div>
+          <img src="">
+          <p>math-tools.app</p>
         </div>
+      </div>
+      <div id="toolList">
+        <input type="radio" id="tool001" class="toolCategoryInput" name="toolCategory" onchange="changeTool();" checked>
+        <label for="tool001" class="toolCategoryLabel"><i class="ai-calculator"></i> Zahlensysteme</label>
+
+        <input type="radio" id="tool002" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
+        <label for="tool002" class="toolCategoryLabel"><i class="ai-box"></i> Fl&auml;chen</label>
+
+        <input type="radio" id="tool003" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
+        <label for="tool003" class="toolCategoryLabel"><i class="ai-home"></i> Volumen</label>
+
+        <input type="radio" id="tool004" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
+        <label for="tool004" class="toolCategoryLabel"><i class="ai-box"></i> Phytagoras</label>
+      </div>
     </nav>
 
     <div id="content">
         <div>
             <h1>Math Tools</h1>
+        </div>
+
+        <div id="toolContainer">
+          <div id="zahlensysteme" class="tool" data-toolid="tool001">
+            <h1>Zahlensysteme</h1>
+          </div>
+
+          <div id="flaechen" class="tool" data-toolid="tool002">
+            <h1>Fl&auml;chen</h1>
+          </div>
+
+          <div id="volumen" class="tool" data-toolid="tool003">
+            <h1>Volumen</h1>
+          </div>
         </div>
     </div>
 
@@ -73,6 +94,7 @@
             console.log('Darkmode activated.');
         	}
           AOS.init({disable: true});
+          changeTool();
       });
 
       window.addEventListener('scroll', function(e) {
@@ -109,6 +131,17 @@
           else{
             elements[i].style.display = "block";
           }
+        }
+      }
+
+      function changeTool(){
+        var allTools = document.getElementsByClassName('tool');
+        for(var i = 0; i < allTools.length; i++){
+          var current = allTools[i].id;
+          var toolId = allTools[i].dataset.toolid;
+          var state = document.getElementById(toolId).checked;
+          if(state == true) document.getElementById(current).style.display = "block";
+          else document.getElementById(current).style.display = "none";
         }
       }
       </script>
