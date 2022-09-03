@@ -147,15 +147,28 @@ body{
       display: none;
    }
 
-   #toolList label, #toolList p{
+   #toolList label{
     padding: 10px;
     margin: 5px 10px;
     transition: var(--transition);
     border-radius: 4px;
    }
 
-   #toolList label:hover, .toolCategoryInput:checked + .toolCategoryLabel, #toolList p:hover{
+   #toolList label:hover, .toolCategoryInput:checked + .toolCategoryLabel, #toolTitle:hover{
     background: var(--theme2);
+   }
+
+   #toolTitle{
+      text-align: center;
+      padding: 10px;
+      margin: 5px 10px;
+      transition: var(--transition);
+      border-radius: 4px;
+   }
+
+   #toolTitle img{
+      width: 50%;
+      height: auto;
    }
 
    /* Tools */
