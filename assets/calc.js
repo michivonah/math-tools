@@ -42,7 +42,7 @@ function tool002(){
 }
 
 function tool004(){
-    var ip = "";
+    var ip = document.getElementById("tool004IP").value;
     // split ip into oktett
     var ipSplit = ip.split('.');
     var ipOkt1 = ipSplit[0];
@@ -50,6 +50,8 @@ function tool004(){
     var ipOkt3 = ipSplit[2];
     var ipOkt4 = ipSplit[3];
     var cidr = 24;
+    // get ip as binary number
+    var ipBinary = ipOkt1.toString(2) + ipOkt2.toString(2) + ipOkt3.toString(2) + ipOkt4.toString(2);
     // caluclate subnet from cidr
     var subnet = "";
     for(var i = 0;i < 32;i++){
