@@ -43,10 +43,12 @@ function tool002(){
 
 function tool004(){
     var ip = "";
-    var ipOkt1 = 192;
-    var ipOkt2 = 168;
-    var ipOkt3 = 001;
-    var ipOkt4 = 001;
+    // split ip into oktett
+    var ipSplit = ip.split('.');
+    var ipOkt1 = ipSplit[0];
+    var ipOkt2 = ipSplit[1];
+    var ipOkt3 = ipSplit[2];
+    var ipOkt4 = ipSplit[3];
     var cidr = 24;
     // caluclate subnet from cidr
     var subnet = "";
@@ -60,8 +62,14 @@ function tool004(){
     }
     document.getElementById("tool004Subnet").value = subnet;
     // get max hosts
-    var hosts = Math.pow(2, (32 - cidr));
+    var hosts = Math.pow(2, (32 - cidr)) - 2;
     document.getElementById("tool004Hosts").value = hosts;
+    // calculate netadress
+    var netadress = ipOkt1 + "." + ipOkt2 + "." + ipOkt3 + "." + ipOkt4;
+    document.getElementById("tool004Netadress").value = netadress;
+    // calculate broadcast
+    var broadcast = ipOkt1 + "." + ipOkt2 + "." + ipOkt3 + "." + (hosts + 1);
+    document.getElementById("tool004Broadcast").value = broadcast;
 }
 
 // functions
