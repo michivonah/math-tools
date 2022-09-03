@@ -189,6 +189,20 @@ body{
       padding: 10px;
    }
 
+   .tool input, .tool button{
+      width: 80%;
+      height: auto;
+      margin: 10px;
+      padding: 5px 10px;
+      background: var(--theme1);
+      color: var(--white);
+      font-family: var(--font);
+      outline: none;
+      border: 2px solid var(--theme2);
+      border-radius: 4px;
+      caret-color: var(--white);
+   }
+
    /* Scroll to the top button*/
    #scroll-top{
       width: 40px;
