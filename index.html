@@ -77,9 +77,10 @@
 
           <div id="zahlensysteme" class="tool" data-toolid="tool001">
             <h2>Zahlensysteme</h2>
-            <input type="number" placeholder="Dezimal">
-            <input type="number" placeholder="Binär">
-            <input type="number" placeholder="Hexadezimal">
+            <p>Hier kannst du Zahlen zwischen verschiedenen Zahlensystemen umwandeln.</p>
+            <input id="tool001DEZ" type="number" placeholder="Dezimal" onkeyup="tool001('dez')">
+            <input id="tool001BIN" type="number" placeholder="Binär" onkeyup="tool001('bin')">
+            <input id="tool001HEX" type="text" placeholder="Hexadezimal" onkeyup="tool001('hex')" pattern="[A-Fa-f0-9]{99}">
           </div>
 
           <div id="flaechen" class="tool" data-toolid="tool002">

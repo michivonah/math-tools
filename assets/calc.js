@@ -1,8 +1,55 @@
 // Calc.js
 // Michi von Ah - 2022
 
-function numSystem(){
-    //
+// tools
+function tool001(type){
+    var dezField = document.getElementById("tool001DEZ");
+    var hexField = document.getElementById("tool001HEX");
+    var binField = document.getElementById("tool001BIN");
+    switch(type){
+        case "dez":
+            hexField.value = numSystem(dezField.value, "dez-hex");
+            binField.value = numSystem(dezField.value, "dez-bin");
+            break;
+        case "hex":
+            dezField.value = numSystem(hexField.value, "hex-dez");
+            binField.value = numSystem(numSystem(hexField.value, "hex-dez"), "dez-bin");
+            break;
+        case "bin":
+            hexField.value = numSystem(numSystem(binField.value, "bin-dez"), "dez-hex");
+            dezField.value = numSystem(binField.value, "bin-dez");
+            break;
+        default:
+            break;
+    }
+}
+
+// functions
+function numSystem(value, type){
+    value = parseInt(value);
+    if(type == null) var type = "dez-hex";
+    switch(type){
+        case "dez-hex":
+            /*var res = Math.floor(value / 16);
+            var remain = getHex(value % 16, "hex");
+            var final = "";
+            while(res > 0){
+                res = Math.floor(res / 16);
+                remain = getHex(value % 16, "hex");
+                final += res.toString();
+            }
+            final += remain.toString();*/
+            //return final + " rest: " + remain;
+            return value.toString(16).toUpperCase();
+        case "hex-dez":
+            return parseInt(value, 16);
+        case "dez-bin":
+            return value.toString(2);
+        case "bin-dez":
+            return parseInt(value, 2);
+        default:
+            return 0;
+    }
 }
 
 function getHex(value, type){
