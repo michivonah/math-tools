@@ -265,3 +265,23 @@ body{
    /* Selection */
   ::selection {background: var(--theme1); color: #ffffff; border-radius: 12px;}
   ::-moz-selection {background: var(--theme1); color: #ffffff; border-radius: 12px;}
+
+  /* Scrollbar */
+  ::-webkit-scrollbar{
+   width: 10px;
+   height: 4px;
+   background: transparent;
+ }
+
+ ::-webkit-scrollbar-thumb{
+   background: var(--theme1);
+   border-radius: 8px;
+ }
+
+ /* Resize handler */
+ ::-webkit-resizer{
+   background: var(--theme1);
+   border-radius: 4px;
+   outline: none;
+   color: var(--white);
+ }
