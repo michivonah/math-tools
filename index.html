@@ -80,16 +80,18 @@
           <div id="zahlensysteme" class="tool" data-toolid="tool001">
             <h2>Zahlensysteme</h2>
             <p>Hier kannst du Zahlen zwischen verschiedenen Zahlensystemen umwandeln.</p>
-            <input id="tool001DEZ" type="number" placeholder="Dezimal" onkeyup="tool001('dez')">
-            <input id="tool001BIN" type="number" placeholder="Binär" onkeyup="tool001('bin')">
-            <input id="tool001HEX" type="text" placeholder="Hexadezimal" onkeyup="tool001('hex')" pattern="[A-Fa-f0-9]{99}">
+            <input id="tool001DEZ" type="number" placeholder="Dezimal (Beispiel: 123)" onkeyup="tool001('dez')">
+            <input id="tool001BIN" type="number" placeholder="Binär (Beispiel: 0011)" onkeyup="tool001('bin')">
+            <input id="tool001HEX" type="text" placeholder="Hexadezimal (Beispiel: 12A)" onkeyup="tool001('hex')" pattern="[A-Fa-f0-9]{99}">
           </div>
 
           <div id="flaechen" class="tool" data-toolid="tool002">
-            <h2>Fl&auml;chen</h2>
-            <p></p>
-            <h2>Volumen</h2>
-            <p></p>
+            <h2>Fl&auml;chen & Volumen</h2>
+            <p>F&uuml;lle die Felder aus, um die entsprechende Fl&auml;che oder das Volumen zu berechnen. Funktioniert f&uuml;r Quadrate, Rechtecke und Quader.</p>
+            <input id="tool002lenght" type="number" placeholder="Länge" onkeyup="tool002()">
+            <input id="tool002width" type="number" placeholder="Breite" onkeyup="tool002()">
+            <input id="tool002height" type="number" placeholder="Höhe" onkeyup="tool002()">
+            <input id="tool002result" type="number" placeholder="Ergebnis (Beispiel: 2x3x4 = 24)" disabled>
           </div>
 
           <div id="phytagoras" class="tool" data-toolid="tool003">

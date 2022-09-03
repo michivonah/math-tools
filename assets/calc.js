@@ -24,6 +24,23 @@ function tool001(type){
     }
 }
 
+function tool002(){
+    var lenght = document.getElementById("tool002lenght").value;
+    var width = document.getElementById("tool002width").value;
+    var height = document.getElementById("tool002height").value;
+    var res = document.getElementById("tool002result");
+    if(lenght == " " || lenght == "" || lenght == null){
+        lenght = 1;
+    }
+    if(width == " " || width == "" || width == null){
+        width = 1;
+    }
+    if(height == " " || height == "" || height == null){
+        height = 1;
+    }
+    res.value = lenght * width * height;
+}
+
 // functions
 function numSystem(value, type){
     value = parseInt(value);
