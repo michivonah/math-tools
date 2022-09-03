@@ -40,6 +40,83 @@ body{
       margin: auto;
    }
 
+   /* Loadingscreen */
+   #loadingscreen{
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: var(--theme1);
+      z-index: 1001;
+      color: var(--white);
+      font-weight: 800;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+   }
+
+   #loader::after{
+      content: "1";
+      font-size: 8rem;
+      transition: 250ms ease all;
+      animation: loadingCount 3s infinite, loadingZoom 1s infinite;
+   }
+
+   @keyframes loadingCount{
+      0%{
+         content: "1";
+      }
+
+      10%{
+         content: "2";
+      }
+
+      20%{
+         content: "3";
+      }
+
+      30%{
+         content: "4";
+      }
+
+      40%{
+         content: "5";
+      }
+
+      50%{
+         content: "6";
+      }
+
+      60%{
+         content: "7";
+      }
+
+      70%{
+         content: "8";
+      }
+
+      80%{
+         content: "9";
+      }
+   }
+
+   @keyframes loadingZoom{
+      0%{
+         font-size: 8rem;
+      }
+
+      50%{
+         font-size: 9rem;
+      }
+
+      100%{
+         font-size: 8rem;
+      }
+   }
+
    /* Tools & Tabs */
    #toolNavigation{
       width: auto;
