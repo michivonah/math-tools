@@ -58,10 +58,10 @@ function tool004(){
             subnet += "0";
         }
     }
-    document.getElementById(tool004Subnet).value = subnet;
+    document.getElementById("tool004Subnet").value = subnet;
     // get max hosts
     var hosts = Math.pow(2, (32 - cidr));
-    document.getElementById(tool004Hosts).value = hosts;
+    document.getElementById("tool004Hosts").value = hosts;
 }
 
 // functions
