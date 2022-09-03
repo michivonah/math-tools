@@ -62,6 +62,9 @@
   
           <input type="radio" id="tool003" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
           <label for="tool003" class="toolCategoryLabel"><i class="ai-box"></i> Phytagoras</label>
+
+          <input type="radio" id="tool004" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
+          <label for="tool004" class="toolCategoryLabel"><i class="ai-globe"></i> IP-Rechner</label>
   
           <input type="radio" id="tool999" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
           <label for="tool999" class="toolCategoryLabel"><i class="ai-paper"></i> Rechtliches</label>
@@ -96,6 +99,17 @@
 
           <div id="phytagoras" class="tool" data-toolid="tool003">
             <h2>Phytagoras</h2>
+          </div>
+
+          <div id="ipRechner" class="tool" data-toolid="tool004">
+            <h2><i class="ai-globe"></i> IP-Rechner</h2>
+            <p>Hiermit k&ouml;nnen IP-Adressen, Subnetzmasken und weitere IP-Konfigurationen berechnet werden. Die Felder, welche leer gelassen werden, werden berechnet.
+            </p>
+            <input id="tool004IP" type="text" placeholder="IP-Adresse" onkeyup="tool004()">
+            <input id="tool004Subnet" type="text" placeholder="Subnetzmaske" onkeyup="tool004()">
+            <input id="tool004Hosts" type="text" placeholder="Anzahl Hosts" onkeyup="tool004()">
+            <input id="tool004Netadress" type="text" placeholder="Netzadresse" onkeyup="tool004()">
+            <input id="tool004Broadcast" type="text" placeholder="Broadcast-Adresse" onkeyup="tool004()">
           </div>
 
           <div id="imprint" class="tool" data-toolid="tool999">

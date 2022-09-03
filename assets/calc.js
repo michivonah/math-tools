@@ -41,6 +41,29 @@ function tool002(){
     res.value = lenght * width * height;
 }
 
+function tool004(){
+    var ip = "";
+    var ipOkt1 = 192;
+    var ipOkt2 = 168;
+    var ipOkt3 = 001;
+    var ipOkt4 = 001;
+    var cidr = 24;
+    // caluclate subnet from cidr
+    var subnet = "";
+    for(var i = 0;i < 32;i++){
+        if(i < cidr){
+            subnet += "1";
+        }
+        else{
+            subnet += "0";
+        }
+    }
+    document.getElementById(tool004Subnet).value = subnet;
+    // get max hosts
+    var hosts = Math.pow(2, (32 - cidr));
+    document.getElementById(tool004Hosts).value = hosts;
+}
+
 // functions
 function numSystem(value, type){
     value = parseInt(value);
