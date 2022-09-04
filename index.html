@@ -83,9 +83,10 @@
           <div id="zahlensysteme" class="tool" data-toolid="tool001">
             <h2>Zahlensysteme</h2>
             <p>Hier kannst du Zahlen zwischen verschiedenen Zahlensystemen umwandeln.</p>
+            <p class="notice">Hexadezimal in anderen Zahlensysteme funktioniert momentan nicht.</p>
             <input id="tool001DEZ" type="number" placeholder="Dezimal (Beispiel: 123)" onkeyup="tool001('dez')">
             <input id="tool001BIN" type="number" placeholder="Binär (Beispiel: 0011)" onkeyup="tool001('bin')">
-            <input id="tool001HEX" type="text" placeholder="Hexadezimal (Beispiel: 12A)" onkeyup="tool001('hex')" pattern="[A-Fa-f0-9]{99}">
+            <input id="tool001HEX" type="text" placeholder="Hexadezimal (Beispiel: 12A)" onkeyup="tool001('hex')" pattern="[A-Fa-f0-9]{99}" disabled>
           </div>
 
           <div id="flaechen" class="tool" data-toolid="tool002">
