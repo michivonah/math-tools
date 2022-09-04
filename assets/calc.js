@@ -45,13 +45,28 @@ function tool004(){
     var ip = document.getElementById("tool004IP").value;
     // split ip into oktett
     var ipSplit = ip.split('.');
-    var ipOkt1 = ipSplit[0];
-    var ipOkt2 = ipSplit[1];
-    var ipOkt3 = ipSplit[2];
-    var ipOkt4 = ipSplit[3];
-    var cidr = 24;
-    // get ip as binary number
+    var ipOkt1 = parseInt(ipSplit[0]);
+    var ipOkt2 = parseInt(ipSplit[1]);
+    var ipOkt3 = parseInt(ipSplit[2]);
+    var ipOkt4 = parseInt(ipSplit[3]);
+    if(ipOkt1 < 0 || ipOkt1 > 255) ipOkt1 = 0;
+    if(ipOkt2 < 0 || ipOkt2 > 255) ipOkt2 = 0;
+    if(ipOkt3 < 0 || ipOkt3 > 255) ipOkt3 = 0;
+    if(ipOkt4 < 0 || ipOkt4 > 255) ipOkt4 = 0;
+    // while loop to make oktett 3 letters lenght
+    /*while(ipOkt1.toString().lenght < 3){
+        var ipOkt1 = "0" + ipOkt1.toString();
+    }*/
+    for(var countIP = 0;countIP < ipSplit.lenght;countIP++){
+        //ipSplit[countIP] = parseInt(ipSplit[countIP]);
+        //if(ipSplit[countIP] < 0 || ipSplit[countIP] > 255) ipSplit[countIP] = 0;
+        // ip to string
+        // string to lenght = 3
+    }
+    // get ip as binary number/convert ip to bin
     var ipBinary = ipOkt1.toString(2) + ipOkt2.toString(2) + ipOkt3.toString(2) + ipOkt4.toString(2);
+    // set cidr notation
+    var cidr = parseInt(document.getElementById("tool004CIDR").value);
     // caluclate subnet from cidr
     var subnet = "";
     for(var i = 0;i < 32;i++){
@@ -62,15 +77,27 @@ function tool004(){
             subnet += "0";
         }
     }
-    document.getElementById("tool004Subnet").value = subnet;
+    var subnetSplit = subnet.match(/.{1,8}/g);
+    var subnetDecimal = parseInt(subnetSplit[0], 2) + "." + parseInt(subnetSplit[1], 2) + "." + parseInt(subnetSplit[2], 2) + "." + parseInt(subnetSplit[3], 2);
+    document.getElementById("tool004Subnet").value = subnetDecimal;
     // get max hosts
     var hosts = Math.pow(2, (32 - cidr)) - 2;
     document.getElementById("tool004Hosts").value = hosts;
     // calculate netadress
-    var netadress = ipOkt1 + "." + ipOkt2 + "." + ipOkt3 + "." + ipOkt4;
+    var netadress = "";
+    for(var countNetadress = 0;countNetadress < 32;countNetadress++){
+        var currentSub = subnet.charAt(countNetadress);
+        var currentIP = ipBinary.charAt(countNetadress);
+        if(currentIP == currentSub) netadress += "1";
+        else netadress += "0";
+    }
     document.getElementById("tool004Netadress").value = netadress;
     // calculate broadcast
-    var broadcast = ipOkt1 + "." + ipOkt2 + "." + ipOkt3 + "." + (hosts + 1);
+    var broadcastBinStr = ""; // all host bits to 1
+    for(var countBroadcast = 0;countBroadcast < (32 - cidr);countBroadcast++){
+        broadcastBinStr += "1";
+    }
+    var broadcast = ipOkt1 + "." + ipOkt2 + "." + ipOkt3 + "." + parseInt(broadcastBinStr, 2);
     document.getElementById("tool004Broadcast").value = broadcast;
 }
 
