@@ -216,7 +216,7 @@ body{
 
    .tool{
       display: none;
-      padding: 10px;
+      padding: 10px 15px;
    }
 
    .tool input, .tool button{
@@ -277,10 +277,11 @@ body{
       background: var(--white);
       transition: all 250ms;
       transform: scaleX(0);
+      border-radius: 2px;
    }
 
    .link:hover::after{
-      transform: scaleX(0.65);
+      transform: scaleX(0.5);
    }
 
    .notice{
