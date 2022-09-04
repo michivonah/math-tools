@@ -54,6 +54,10 @@
     <div id="loader"></div>
   </div>
 
+  <div id="openNavbar" onclick="toggleNavigation('show')">
+    <i class="ai-chevron-right"></i>
+  </div>
+
     <div id="content">
       <div id="toolNavigation">
         <div id="toolList">
@@ -62,7 +66,6 @@
             <p>math-tools.app</p>
           </div>
           
-
           <input type="radio" id="welcome" class="toolCategoryInput" name="toolCategory" onchange="changeTool();" checked>
           <label for="welcome" class="toolCategoryLabel"><i class="ai-victory-hand"></i> Willkommen</label>
   
@@ -163,6 +166,9 @@
           changeTool();
           // install service worker
           if('serviceWorker' in navigator) navigator.serviceWorker.register('/service-worker.js');
+          // add eventlistener for smartphone navigation
+          var navButtons = document.querySelectorAll('.toolCategoryLabel');
+          navButtons.forEach(obj => obj.addEventListener("click", toggleNavigation));
           // show a random greeting
           randomGreeting();
           // hide loadingscreen
