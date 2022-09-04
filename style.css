@@ -233,6 +233,14 @@ body{
       caret-color: var(--white);
    }
 
+   /* Welcome screen */
+   #willkommen{
+      background-image: url(assets/images/math_background.svg);
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center;
+   }
+
    /* Scroll to the top button*/
    #scroll-top{
       width: 40px;
