@@ -38,12 +38,14 @@ function toggleSection(sectionName, type){
   function toggleNavigation(mode){
     var toggleBtn = document.getElementById("openNavbar");
     var nav = document.getElementById("toolNavigation");
-    if(mode == "show"){
-      nav.style.left = 0;
-      toggleBtn.style.display = "none";
-    }
-    else{
-      nav.style.left = "-100%";
-      toggleBtn.style.display = "flex";
+    if(window.innerWidth <= 640){
+      if(mode == "show"){
+        nav.style.left = 0;
+        toggleBtn.style.display = "none";
+      }
+      else{
+        nav.style.left = "-100%";
+        toggleBtn.style.display = "flex";
+      }
     }
   }
