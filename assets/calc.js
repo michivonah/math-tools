@@ -65,6 +65,7 @@ function tool004(){
     }
     // get ip as binary number/convert ip to bin
     var ipBinary = ipOkt1.toString(2) + ipOkt2.toString(2) + ipOkt3.toString(2) + ipOkt4.toString(2);
+    //var ipBinary = "11000000101010000000000100000001";
     // set cidr notation
     var cidr = document.getElementById("tool004CIDR").value;
     // caluclate subnet from cidr
@@ -88,17 +89,21 @@ function tool004(){
     for(var countNetadress = 0;countNetadress < 32;countNetadress++){
         var currentSub = subnet.charAt(countNetadress);
         var currentIP = ipBinary.charAt(countNetadress);
-        if(currentIP == currentSub) netadress += "1";
+        if(currentIP == "1" && currentSub == "1") netadress += "1";
         else netadress += "0";
     }
-    document.getElementById("tool004Netadress").value = netadress;
+    var netadressSplit = netadress.match(/.{1,8}/g);
+    var netadressDecimal = parseInt(netadressSplit[0], 2) + "." + parseInt(netadressSplit[1], 2) + "." + parseInt(netadressSplit[2], 2) + "." + parseInt(netadressSplit[3], 2);
+    document.getElementById("tool004Netadress").value = netadressDecimal;
     // calculate broadcast
     var broadcastBinStr = ""; // all host bits to 1
     for(var countBroadcast = 0;countBroadcast < (32 - cidr);countBroadcast++){
         broadcastBinStr += "1";
     }
-    var broadcast = ipOkt1 + "." + ipOkt2 + "." + ipOkt3 + "." + parseInt(broadcastBinStr, 2);
-    document.getElementById("tool004Broadcast").value = broadcast;
+    broadcastBinStr = ipBinary.slice(0, cidr) + broadcastBinStr;
+    var broadcastSplit = broadcastBinStr.match(/.{1,8}/g);
+    var broadcastDecimal = parseInt(broadcastSplit[0], 2) + "." + parseInt(broadcastSplit[1], 2) + "." + parseInt(broadcastSplit[2], 2) + "." + parseInt(broadcastSplit[3], 2);
+    document.getElementById("tool004Broadcast").value = broadcastDecimal;
 }
 
 // functions
