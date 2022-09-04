@@ -44,6 +44,11 @@ function tool002(){
 function tool004(){
     var ip = document.getElementById("tool004IP").value;
     // split ip into oktett
+    var ipDecimal = ip;
+    ipDecimal = ip.replace('.','');
+    console.log(ipDecimal);
+    console.log(ipDecimal.toString(2));
+    //
     var ipSplit = ip.split('.');
     var ipOkt1 = parseInt(ipSplit[0]);
     var ipOkt2 = parseInt(ipSplit[1]);
