@@ -1,7 +1,7 @@
 {
     "name": "Math Tools",
     "short_name": "Math Tools",
-    "description": "Math Tools",
+    "description": "Eine Sammlung von diversen Mathematik Tools, die dir helfen sollen den Alltag zu erleichtern.",
     "lang": "de-CH",
     "orientation": "any",
     "theme_color": "#3498db",
