@@ -8,6 +8,7 @@ body{
    text-align: left;
    font-family: "open sans", sans-serif;
    scroll-behavior: smooth;
+   overflow: hidden;
    --theme1: #3498db;
    --theme2: #2980b9;
    --background: #eaf2f8;
