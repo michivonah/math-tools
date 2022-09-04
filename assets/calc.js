@@ -66,7 +66,7 @@ function tool004(){
     // get ip as binary number/convert ip to bin
     var ipBinary = ipOkt1.toString(2) + ipOkt2.toString(2) + ipOkt3.toString(2) + ipOkt4.toString(2);
     // set cidr notation
-    var cidr = parseInt(document.getElementById("tool004CIDR").value);
+    var cidr = document.getElementById("tool004CIDR").value;
     // caluclate subnet from cidr
     var subnet = "";
     for(var i = 0;i < 32;i++){

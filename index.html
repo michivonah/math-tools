@@ -106,7 +106,7 @@
             <p>Hiermit k&ouml;nnen IP-Adressen, Subnetzmasken und weitere IP-Konfigurationen berechnet werden. Die Felder, welche leer gelassen werden, werden berechnet.</p>
             <p class="notice">Hinweis: Momentan funktioniert die Umrechnung nur von den Felder IP-Adresse & CIDR in die anderen Formate. Die Umrechnung von allem nach allem kommt noch.</p>
             <input id="tool004IP" type="text" placeholder="IP-Adresse (192.168.1.10)" onkeyup="tool004()" maxlength="15">
-            <input id="tool004CIDR" type="text" placeholder="CIDR-Notation (Bsp: 24 = 255.255.255.0)" onkeyup="tool004()" maxlength="2">
+            <input id="tool004CIDR" type="number" placeholder="CIDR-Notation (Bsp: 24 = 255.255.255.0)" onkeyup="tool004()" maxlength="2" min="1" max="31">
             <input id="tool004Subnet" type="text" placeholder="Subnetzmaske (255.255.255.0)" onkeyup="tool004()">
             <input id="tool004Hosts" type="text" placeholder="Anzahl Hosts" onkeyup="tool004()">
             <input id="tool004Netadress" type="text" placeholder="Netzadresse" onkeyup="tool004()">
