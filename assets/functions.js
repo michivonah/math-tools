@@ -49,3 +49,8 @@ function toggleSection(sectionName, type){
       }
     }
   }
+
+  function copyClipboard(contentID){
+    var copyTxt = document.getElementById(contentID).value;
+    navigator.clipboard.writeText(copyTxt);
+  }

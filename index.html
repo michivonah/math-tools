@@ -103,8 +103,11 @@
             <p>Hier kannst du Zahlen zwischen verschiedenen Zahlensystemen umwandeln.</p>
             <p class="notice">Hexadezimal in anderen Zahlensysteme funktioniert momentan nicht.</p>
             <input id="tool001DEZ" type="number" placeholder="Dezimal (Beispiel: 123)" onkeyup="tool001('dez')">
+            <button class="copyBtn" onclick="copyClipboard('tool001DEZ')"><i class="ai-copy"></i></button>
             <input id="tool001BIN" type="number" placeholder="Binär (Beispiel: 0011)" onkeyup="tool001('bin')">
+            <button class="copyBtn" onclick="copyClipboard('tool001BIN')"><i class="ai-copy"></i></button>
             <input id="tool001HEX" type="text" placeholder="Hexadezimal (Beispiel: 12A)" onkeyup="tool001('hex')" pattern="[A-Fa-f0-9]{99}" disabled>
+            <button class="copyBtn" onclick="copyClipboard('tool001HEX')"><i class="ai-copy"></i></button>
           </div>
 
           <div id="flaechen" class="tool" data-toolid="tool002">
@@ -114,6 +117,7 @@
             <input id="tool002width" type="number" placeholder="Breite" onkeyup="tool002()">
             <input id="tool002height" type="number" placeholder="Höhe" onkeyup="tool002()">
             <input id="tool002result" type="number" placeholder="Ergebnis (Beispiel: 2x3x4 = 24)" disabled>
+            <button class="copyBtn" onclick="copyClipboard('tool002result')"><i class="ai-copy"></i></button>
           </div>
 
           <div id="phytagoras" class="tool" data-toolid="tool003">
