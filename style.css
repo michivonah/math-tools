@@ -347,6 +347,7 @@ body{
       font-family: 'Mali', cursive;
       font-weight: 300;
       font-size: 20px;
+      /*line-height: 20px;*/
       background-image: linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px),
       linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
