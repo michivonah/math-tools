@@ -59,18 +59,9 @@ function tool004(){
     if(ipOkt3 < 0 || ipOkt3 > 255) ipOkt3 = 0;
     if(ipOkt4 < 0 || ipOkt4 > 255) ipOkt4 = 0;
     // while loop to make oktett 3 letters lenght
-    while(ipOkt1.toString(2).lenght < 8){
+    /*while(ipOkt1.toString(2).lenght < 8){
         ipOkt1 = "0" + ipOkt1.toString(2);
-    }
-    while(ipOkt2.toString(2).lenght < 8){
-        ipOkt2 = "0" + ipOkt2.toString(2);
-    }
-    while(ipOkt3.toString(2).lenght < 8){
-        ipOkt3 = "0" + ipOkt3.toString(2);
-    }
-    while(ipOkt4.toString(2).lenght < 8){
-        ipOkt4 = "0" + ipOkt4.toString(2);
-    }
+    }*/
     //for(var countIP = 0;countIP < ipSplit.lenght;countIP++){
         //ipSplit[countIP] = parseInt(ipSplit[countIP]);
         //if(ipSplit[countIP] < 0 || ipSplit[countIP] > 255) ipSplit[countIP] = 0;
@@ -78,7 +69,7 @@ function tool004(){
         // string to lenght = 3
     //}
     // get ip as binary number/convert ip to bin
-    var ipBinary = ipOkt1 + ipOkt2 + ipOkt3 + ipOkt4;
+    var ipBinary = ipOkt1.toString(2) + ipOkt2.toString(2) + ipOkt3.toString(2) + ipOkt4.toString(2);
     //var ipBinary = "11000000101010000000000100000001";
     // set cidr notation
     var cidr = document.getElementById("tool004CIDR").value;
