@@ -41,6 +41,21 @@ function tool002(){
     res.value = lenght * width * height;
 }
 
+function tool003(){
+    var a = document.getElementById("tool003A");
+    var b = document.getElementById("tool003B");
+    var c = document.getElementById("tool003C");
+    if(a.value == " "){
+        a.value = Math.pow(c.value, 2) - Math.pow(b.value, 2);
+    }
+    if(b.value == " "){
+        b.value = Math.pow(c.value, 2) - Math.pow(a.value, 2);
+    }
+    if(c.value == " "){
+        c.value = Math.pow(a.value, 2) + Math.pow(b.value, 2);
+    }
+}
+
 function tool004(){
     var ip = document.getElementById("tool004IP").value;
     // split ip into oktett

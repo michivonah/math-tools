@@ -76,7 +76,7 @@
           <label for="tool002" class="toolCategoryLabel"><i class="ai-home"></i> Fl&auml;chen/Volumen</label>
   
           <input type="radio" id="tool003" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
-          <label for="tool003" class="toolCategoryLabel" style="display:none;"><i class="ai-box"></i> Phytagoras</label>
+          <label for="tool003" class="toolCategoryLabel"><i class="ai-box"></i> Phytagoras</label>
 
           <input type="radio" id="tool004" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
           <label for="tool004" class="toolCategoryLabel"><i class="ai-globe"></i> IP-Rechner</label>
@@ -126,7 +126,12 @@
           </div>
 
           <div id="phytagoras" class="tool" data-toolid="tool003">
-            <h2>Phytagoras</h2>
+            <h2>Phytagoras &#8730;</h2>
+            <p>Hier kannst du den Phytagoras berechnen.</p>
+            <img src="assets/images/phytagoras.svg" alt="Phytagoras" title="Phytagoras">
+            <input id="tool003A" type="number" placeholder="Kathete A" onkeyup="tool003()">
+            <input id="tool003B" type="number" placeholder="Kathete B" onkeyup="tool003()">
+            <input id="tool003C" type="number" placeholder="Hypotenuse" onkeyup="tool003()">
           </div>
 
           <div id="ipRechner" class="tool" data-toolid="tool004">
