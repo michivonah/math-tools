@@ -251,7 +251,7 @@ body{
       border: 2px solid var(--theme2);
       border-radius: 4px;
       caret-color: var(--white);
-      font-size: 1rem;
+      font-size: 0.9rem;
    }
 
    .tool ul li::marker{
