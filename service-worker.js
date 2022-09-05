@@ -1,4 +1,4 @@
-const workerCache = "math-tools-app-v1"
+const workerCache = "math-tools-app-v1-0-1"
 const assets = [
   "/",
   "/index.html",
@@ -16,7 +16,7 @@ const assets = [
   "https://unpkg.com/akar-icons-fonts",
   "https://unpkg.com/aos@2.3.1/dist/aos.js",
   "https://unpkg.com/aos@2.3.1/dist/aos.css",
-  "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+  "https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap"
 ]
 
 self.addEventListener("install", installEvent => {
