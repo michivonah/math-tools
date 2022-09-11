@@ -41,18 +41,39 @@ function tool002(){
     res.value = lenght * width * height;
 }
 
-function tool003(){
+function tool003(currentLenght){
     var a = document.getElementById("tool003A");
     var b = document.getElementById("tool003B");
     var c = document.getElementById("tool003C");
-    if(a.value == " "){
-        a.value = Math.pow(c.value, 2) - Math.pow(b.value, 2);
-    }
-    if(b.value == " "){
-        b.value = Math.pow(c.value, 2) - Math.pow(a.value, 2);
-    }
-    if(c.value == " "){
-        c.value = Math.pow(a.value, 2) + Math.pow(b.value, 2);
+    switch(currentLenght){
+        case "A":
+            if(c.value == "" && b.value != ""){
+                c.value = Math.pow(a.value, 2) + Math.pow(b.value, 2);
+            }
+            else if(b.value == "" && c.value != ""){
+                b.value = Math.pow(c.value, 2) - Math.pow(a.value, 2);
+            }
+            break;
+        case "B":
+            if(c.value == "" && a.value != ""){
+                c.value = Math.pow(a.value, 2) + Math.pow(b.value, 2);
+            }
+            else if(a.value == "" && c.value != ""){
+                a.value = Math.pow(c.value, 2) - Math.pow(b.value, 2);
+            }
+            break;
+        case "C":
+            if(a.value == "" && b.value != ""){
+                // a leer, b hat wert -> a berechnen
+                a.value = Math.pow(c.value, 2) - Math.pow(b.value, 2);
+            }
+            else if(b.value == "" && a.value != ""){
+                // b leer, a hat wert -> b berechnen
+                b.value = Math.pow(c.value, 2) - Math.pow(a.value, 2);
+            }
+            break;
+        default:
+            break;
     }
 }
 
