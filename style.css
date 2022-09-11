@@ -438,7 +438,7 @@ body{
    /* Print */
    @media print{
       @page{
-         size: auto;
+         size: A4;
          margin: 0;
          color: #000;
          background: #fff;
