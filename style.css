@@ -435,6 +435,46 @@ body{
       }
    }
 
+   /* Print */
+   @media print{
+      @page{
+         size: auto;
+         margin: 0;
+         color: #000;
+         background: #fff;
+         padding: 0;
+         overflow: hidden;
+         border: none;
+         user-select: none;
+      }
+
+      body{
+         --background: #fff;
+         --color: #000;
+         color: #000;
+         background: #fff;
+      }
+
+      #toolNavigation, .copyBtn, .scroll-top{
+         display: none;
+      }
+
+      .notice{
+         background: rgba(0, 0, 0, 0.1);
+      }
+   
+      .notice::before{
+         background: #000;
+      }
+
+      .tool input{
+         width: 90%;
+         background: rgba(0, 0, 0, 0.1);
+         color: #000;
+         border: 2px dotted #000;
+      }
+   }
+
    /* Selection */
   ::selection {background: var(--theme1); color: #ffffff; border-radius: 12px;}
   ::-moz-selection {background: var(--theme1); color: #ffffff; border-radius: 12px;}
