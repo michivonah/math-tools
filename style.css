@@ -241,9 +241,9 @@ body{
    }
 
    .tool input{
-      width: calc(90% - 50px);
+      width: calc(90% - 80px);
       height: auto;
-      margin: 10px;
+      margin: 10px 5px;
       padding: 5px 10px;
       background: var(--theme1);
       color: var(--white);
@@ -434,6 +434,17 @@ body{
          top: 0;
          left: -100%;
          z-index: 100;
+      }
+
+      /* Copy button */
+      .copyBtn{
+         width: calc(100% - 20px);
+         margin: 10px;
+      }
+
+      .tool input{
+         width: calc(90% - 20px);
+         margin: 10px;
       }
    }
 
