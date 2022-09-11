@@ -182,6 +182,7 @@
         if(window.matchMedia('(prefers-color-scheme: dark)').matches || localStorage.getItem('darkmode') == "true"){
             document.body.style.setProperty('--background', '#181818');
             document.body.style.setProperty('--color', '#fff');
+            document.body.style.setProperty('--imgFilter', '0%');
             console.log('Darkmode activated.');
         	}
           // disable animation
