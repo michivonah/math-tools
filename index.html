@@ -193,7 +193,7 @@
           // show current tool
           changeTool();
           // install service worker
-          if('serviceWorker' in navigator) navigator.serviceWorker.register('/service-worker.js?v=1-0-1');
+          if('serviceWorker' in navigator) navigator.serviceWorker.register('/service-worker.js?v=1-0-2');
           // add eventlistener for smartphone navigation
           var navButtons = document.querySelectorAll('.toolCategoryLabel');
           navButtons.forEach(obj => obj.addEventListener("click", toggleNavigation));
