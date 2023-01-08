@@ -244,12 +244,38 @@ function getInformationsgehalt(probability){
 }
 
 function getEntropy(symbolList){
-    var exampleSymbolList = {
-        //
-    };
+    if(symbolList == null){
+        var symbolList = [
+            {
+                "Symbol": "A",
+                "Informationsgehalt": "12",
+                "Probability": "15%"
+            },
+            {
+                "Symbol": "B",
+                "Informationsgehalt": "5",
+                "Probability": "29%"
+            },
+            {
+                "Symbol": "C",
+                "Informationsgehalt": "4",
+                "Probability": "38%"
+            },
+            {
+                "Symbol": "D",
+                "Informationsgehalt": "14",
+                "Probability": "12%"
+            },
+            {
+                "Symbol": "E",
+                "Informationsgehalt": "9",
+                "Probability": "6%"
+            }
+        ];
+    }
     var result = 0;
-    for(var s = 0; s < symbolList.lenght; s++){
-        result += symbolList.Informationsgehalt * symbolList.probability;
+    for(var s = 0; symbolList[s] != null; s++){
+        result = parseInt(symbolList[s].Informationsgehalt) * parseInt(symbolList[s].Probability) + result;
     }
     return result;
 }
