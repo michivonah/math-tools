@@ -235,3 +235,26 @@ function getHex(value, type){
         return referenceTable[value].hex;
     }
 }
+
+// cryptography caluulations
+function getInformationsgehalt(probability){
+    var result = Math.log2(probability);
+    if(result > 0) result = result * -1;
+    return(result);
+}
+
+function getEntropy(symbolList){
+    var exampleSymbolList = {
+        //
+    };
+    var result = 0;
+    for(var s = 0; s < symbolList.lenght; s++){
+        result += symbolList.Informationsgehalt * symbolList.probability;
+    }
+    return result;
+}
+
+function getRedundancy(bitsTotal, bitsUsed){
+    var result = (bitsTotal / bitsUsed) - 1;
+    return result;
+}
