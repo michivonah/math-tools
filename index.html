@@ -80,6 +80,9 @@
 
           <input type="radio" id="tool004" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
           <label for="tool004" class="toolCategoryLabel"><i class="ai-globe"></i> IP-Rechner</label>
+
+          <input type="radio" id="tool005" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
+          <label for="tool005" class="toolCategoryLabel"><i class="ai-key"></i> Kryptografie</label>
   
           <input type="radio" id="tool999" class="toolCategoryInput" name="toolCategory" onchange="changeTool();">
           <label for="tool999" class="toolCategoryLabel"><i class="ai-paper"></i> Rechtliches</label>
@@ -147,6 +150,12 @@
             <input id="tool004Hosts" type="text" placeholder="Anzahl Hosts" onkeyup="tool004()">
             <input id="tool004Netadress" type="text" placeholder="Netzadresse" onkeyup="tool004()">
             <input id="tool004Broadcast" type="text" placeholder="Broadcast-Adresse" onkeyup="tool004()">
+          </div>
+
+          <div id="cryptography" class="tool" data-toolid="tool005">
+            <h2><i class="ai-key"></i> Kryptografie</h2>
+            <p>Tools um die Auftrittswahrscheinlichkeit, den Informationsgehalt und die Entropie zu berchnen.</p>
+            <p class="notice">In Entwicklung</p>
           </div>
 
           <div id="imprint" class="tool" data-toolid="tool999">
