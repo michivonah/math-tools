@@ -477,7 +477,8 @@ body{
       }
    
       .notice::before{
-         background: #000;
+         background: #000 !important;
+         color: #000 !important;
       }
 
       .tool input{
