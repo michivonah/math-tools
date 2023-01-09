@@ -275,7 +275,7 @@ function getEntropy(symbolList){
     }
     var result = 0;
     for(var s = 0; symbolList[s] != null; s++){
-        result = parseInt(symbolList[s].Informationsgehalt) * parseInt(symbolList[s].Probability) + result;
+        result = parseInt(symbolList[s].Informationsgehalt) * (parseInt(symbolList[s].Probability) / 100) + result;
     }
     return result;
 }
