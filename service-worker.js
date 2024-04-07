@@ -1,4 +1,4 @@
-const workerCache = "math-tools-app-v1-0-2"
+const workerCache = "math-tools-app-v1-0-3"
 const assets = [
   "/",
   "/index.html",
